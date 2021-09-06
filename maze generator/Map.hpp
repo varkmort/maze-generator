@@ -2,14 +2,12 @@
 
 #include <iostream>
 #include <cstring>
+
+
 #include "Tile.hpp"
-struct Coord {
-	size_t x;
-	size_t y;
-	friend bool operator==(Coord, Coord);
-	friend bool operator<(Coord, Coord);
-	friend bool operator>(Coord, Coord);
-};
+#include "Coord.hpp"
+
+
 class Map {
 public:
 	Map(const size_t length, const size_t width);

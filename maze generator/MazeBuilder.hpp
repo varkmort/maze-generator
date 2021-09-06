@@ -4,7 +4,7 @@
 #include <chrono>
 #include <algorithm>
 #include <vector>
-#include <set>
+#include <unordered_set>
 #include <stack>
 
 class MazeBuilder {
@@ -28,6 +28,6 @@ private:
 	Coord startPoint;
 	Coord current;
 	std::stack<Coord> path;
-    std::set<Coord> visited;
+    std::unordered_set<Coord> visited;
 };
 

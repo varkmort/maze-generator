@@ -30,24 +30,26 @@ Map::~Map() {
 }
 
 void Map::setWall(Coord coord) {
-	map[coord.x][coord.y].setState(Tile::State::wall);
+	map[coord.y][coord.x].setState(Tile::State::wall);
 }
 
 void Map::setFlor(Coord coord) {
-	map[coord.x][coord.y].setState(Tile::State::floor);
+	map[coord.y][coord.x].setState(Tile::State::floor);
 }
 
 bool Map::isWall(Coord coord) {
 	if (!isInner(coord)) {
-		return false;
+		return true;
 	}
 	else {
-		return map[coord.x][coord.y].isWall();
+		return map[coord.y][coord.x].isWall();
 	}
 }
 bool Map::isInner(Coord coord) {
-	return (coord.x < length ) && (coord.y < width);
+	return (coord.y < length ) && (coord.x < width);
 }
+
+
 
 std::ostream& operator<<(std::ostream &out, const Map &map) {
 	for (size_t i = 0; i < map.length; i++) {
