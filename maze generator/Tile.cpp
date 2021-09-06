@@ -1,0 +1,15 @@
+#include "Tile.hpp"
+
+Tile::Tile():state_(State::floor) {}
+
+Tile::State Tile::getState() const {
+	return state_;
+}
+
+void Tile::setState(State state) {
+	state_ = state;
+}
+
+bool Tile::isWall() {
+	return bool(state_);
+}
