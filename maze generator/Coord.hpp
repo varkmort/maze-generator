@@ -18,7 +18,8 @@ namespace std {
             using std::size_t;
             using std::hash;
 
-            return (hash<size_t>()(c.x) ^ (hash<size_t>()(c.y) << 1));
+            return (hash<size_t>()(c.x) ^
+                    (hash<size_t>()(c.y) << 1));
         }
     };
 
