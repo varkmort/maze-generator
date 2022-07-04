@@ -12,7 +12,7 @@ class Map {
 public:
 	Map(const size_t length, const size_t width);
 	Map(const Map &other);
-	Map(Map &&other);
+	Map(Map &&other)noexcept;
 	~Map();
 	void setWall(Coord);
 	void setFlor(Coord);

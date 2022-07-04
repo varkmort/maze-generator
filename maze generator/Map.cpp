@@ -15,7 +15,7 @@ Map::Map(const Map &other):length(other.length),width(other.width) {
 	}
 }
 
-Map::Map(Map &&other):length(other.length),width(other.width) {
+Map::Map(Map &&other)noexcept:length(other.length),width(other.width) {
 	this->map = other.map;
 	other.map = nullptr;
 }
@@ -61,7 +61,9 @@ std::ostream& operator<<(std::ostream &out, const Map &map) {
 				out << char(0xB0);
 			}
 		}
-		out << '\n';
+		if (i < map.length - 1) {
+			out << '\n';
+		}
 	}
 	return out;
 }

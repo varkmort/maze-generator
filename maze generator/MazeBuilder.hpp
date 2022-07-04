@@ -24,7 +24,7 @@ private:
 	Coord down(Coord coord);
 	Coord left(Coord coord);
 	Coord right(Coord coord);
-	bool isPossibleway(Coord coord);
+	bool isPossibleWay(Coord coord);
 	Map *data;
 	Coord startPoint;
 	Coord current;
