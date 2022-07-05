@@ -76,10 +76,10 @@ std::vector<Coord> MazeBuilder::getDirections(Coord coord){
     std::vector<Coord> result;
     result.reserve(4);
     auto directions = {
-        up(coord), 
-        down(coord), 
-        left(coord), 
-        right(coord)
+        coord.up(),
+        coord.down(),
+        coord.left(),
+        coord.right()
     };
     for(const auto &dirrection: directions){
         if(isPossibleWay(dirrection)){
@@ -96,8 +96,3 @@ bool MazeBuilder::isMazeComplite(){
 bool MazeBuilder::isPossibleWay(Coord coord){
     return !data->isWall(coord) && !visited.contains(coord);
 }
-
-Coord MazeBuilder::up   (Coord coord){return coord.y-=1,coord;}
-Coord MazeBuilder::down (Coord coord){return coord.y+=1,coord;}
-Coord MazeBuilder::left (Coord coord){return coord.x-=1,coord;}
-Coord MazeBuilder::right(Coord coord){return coord.x+=1,coord;}

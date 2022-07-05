@@ -22,10 +22,6 @@ public:
 	bool isMazeComplite();
 private:
 	std::vector<Coord> getDirections(Coord);
-	Coord up(Coord coord);
-	Coord down(Coord coord);
-	Coord left(Coord coord);
-	Coord right(Coord coord);
 	bool isPossibleWay(Coord coord);
 	Map *data;
 	Coord startPoint;

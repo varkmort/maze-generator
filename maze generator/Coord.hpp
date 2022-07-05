@@ -7,7 +7,13 @@ class Coord {
 public:
 	size_t x;
 	size_t y;
+
 	friend bool operator==(Coord, Coord);
+
+    Coord up();
+    Coord down();
+    Coord left();
+    Coord right();
 };
 
 
