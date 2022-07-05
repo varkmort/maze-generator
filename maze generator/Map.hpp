@@ -1,12 +1,11 @@
-#pragma once
+#ifndef MAP_HPP
+#define MAP_HPP
 
 #include <iostream>
 #include <cstring>
 
-
 #include "Tile.hpp"
 #include "Coord.hpp"
-
 
 class Map {
 public:
@@ -18,7 +17,7 @@ public:
 	void setFlor(Coord);
 	bool isWall(Coord);
 	friend std::ostream& operator<<(std::ostream &out, const Map &map);
-	friend std::istream& operator>>(std::istream &in, const Map &map);
+	//friend std::istream& operator>>(std::istream &in, const Map &map);
 
 private:
 	bool isInner(Coord);
@@ -27,3 +26,4 @@ private:
 	const size_t width;
 };
 
+#endif // !MAP_HPP

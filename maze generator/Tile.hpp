@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TITLE_HPP
+#define TITLE_HPP
+
 
 class Tile {
 public:
@@ -14,3 +16,4 @@ private:
     State state_;
 };
 
+#endif // !TITLE_HPP

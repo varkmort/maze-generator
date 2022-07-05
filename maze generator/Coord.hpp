@@ -1,6 +1,8 @@
-#pragma once
+#ifndef COORD_HPP
+#define COORD_HPP
 
 #include <type_traits>
+
 class Coord {
 public:
 	size_t x;
@@ -20,3 +22,5 @@ namespace std {
     };
 
 }
+
+#endif // !COORD_HPP
