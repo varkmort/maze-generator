@@ -1,12 +1,14 @@
-#pragma once
+#ifndef MAZE_BUILDER_HPP
+#define MAZE_BUILDER_HPP
 
-#include "Map.hpp"
 #include <random>
 #include <chrono>
 #include <algorithm>
 #include <vector>
 #include <unordered_set>
 #include <stack>
+
+#include "Map.hpp"
 
 class MazeBuilder {
 public:
@@ -32,3 +34,4 @@ private:
     std::unordered_set<Coord> visited;
 };
 
+#endif // !MAZE_BUILDER_HPP

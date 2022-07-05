@@ -6,7 +6,9 @@
 MazeBuilder::MazeBuilder(Map *map, Coord startPoint)
     :data(map), 
     startPoint(startPoint)
-{}
+{
+    current=startPoint;
+}
 
 void MazeBuilder::setMap(Map *map) {
     data = map;
@@ -41,7 +43,7 @@ void MazeBuilder::build() {
             );
             std::uniform_int_distribution<int> distribution(
                 1,
-                directions.size()-1
+                static_cast<int>(directions.size()-1)
             );
             auto del = distribution(generator);
             for (size_t i = 1; i <= del ; i++) {
