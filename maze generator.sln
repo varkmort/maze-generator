@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "maze generator", "maze generator\maze generator.vcxproj", "{E802A58F-A3DF-4727-87F7-36E3C2B87D55}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleExample", "ConsoleExample\ConsoleExample.vcxproj", "{EF922DD8-8C79-4033-873B-EFC6AE027CAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{E802A58F-A3DF-4727-87F7-36E3C2B87D55}.Release|x64.Build.0 = Release|x64
 		{E802A58F-A3DF-4727-87F7-36E3C2B87D55}.Release|x86.ActiveCfg = Release|Win32
 		{E802A58F-A3DF-4727-87F7-36E3C2B87D55}.Release|x86.Build.0 = Release|Win32
+		{EF922DD8-8C79-4033-873B-EFC6AE027CAD}.Debug|x64.ActiveCfg = Debug|x64
+		{EF922DD8-8C79-4033-873B-EFC6AE027CAD}.Debug|x64.Build.0 = Debug|x64
+		{EF922DD8-8C79-4033-873B-EFC6AE027CAD}.Debug|x86.ActiveCfg = Debug|Win32
+		{EF922DD8-8C79-4033-873B-EFC6AE027CAD}.Debug|x86.Build.0 = Debug|Win32
+		{EF922DD8-8C79-4033-873B-EFC6AE027CAD}.Release|x64.ActiveCfg = Release|x64
+		{EF922DD8-8C79-4033-873B-EFC6AE027CAD}.Release|x64.Build.0 = Release|x64
+		{EF922DD8-8C79-4033-873B-EFC6AE027CAD}.Release|x86.ActiveCfg = Release|Win32
+		{EF922DD8-8C79-4033-873B-EFC6AE027CAD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
