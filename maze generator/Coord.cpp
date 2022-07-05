@@ -6,17 +6,17 @@ bool operator==(Coord a, Coord b) {
 }
 
 Coord Coord::up() {
-	return {this->x, this->y - 1};
+	return Coord{this->x, this->y - 1};
 }
 
 Coord Coord::down() {
-	return {this->x , this->y + 1};
+	return Coord{this->x , this->y + 1};
 }
 
 Coord Coord::left() {
-	return {this->x - 1, this->y};
+	return Coord{this->x - 1, this->y};
 }
 
 Coord Coord::right() {
-	return {this->x + 1, this->y};
+	return Coord{this->x + 1, this->y};
 }
