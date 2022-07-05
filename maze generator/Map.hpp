@@ -9,10 +9,10 @@
 
 class Map {
 public:
-	Map(const size_t length, const size_t width);
+	Map(const long long length, const long long width);
 	Map(const Map &other);
 	Map(Map &&other)noexcept;
-	~Map();
+	virtual ~Map();
 	void setWall(Coord);
 	void setFlor(Coord);
 	bool isWall(Coord);
@@ -21,9 +21,9 @@ public:
 
 private:
 	bool isInner(Coord);
-	Tile **map;
-	const size_t length;
-	const size_t width;
+	Tile *map;
+	const long long length;
+	const long long width;
 };
 
 #endif // !MAP_HPP

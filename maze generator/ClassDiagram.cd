@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Coord">
+    <Position X="1" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAIAAAAQABgAgAAgAA=</HashCode>
+      <FileName>Coord.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Map">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEQAAABAAAAAAQEAAAAQAAAAAAAAAAIAIAABAAAA=</HashCode>
+      <FileName>Map.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MazeBuilder">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABACgAQAAAAAAAAAAACAAAAgAIBAAAAAIAQDIBAAAA=</HashCode>
+      <FileName>MazeBuilder.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tile">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Tile::State" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Tile.hpp</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAIAAAAAAAQQ=</HashCode>
+      <FileName>Tile.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="std::hash&lt;Coord&gt;" Collapsed="true">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Coord.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

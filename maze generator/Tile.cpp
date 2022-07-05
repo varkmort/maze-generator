@@ -11,5 +11,5 @@ void Tile::setState(State state) {
 }
 
 bool Tile::isWall() {
-	return bool(state_);
+	return static_cast<bool>(this->state_);
 }
