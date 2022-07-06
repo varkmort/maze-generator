@@ -154,13 +154,21 @@
     <ClCompile Include="Coord.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="MazeBuilder.cpp" />
+    <ClCompile Include="StackBacktraceFast.cpp" />
+    <ClCompile Include="StackBacktraceSlow.cpp" />
     <ClCompile Include="Tile.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BuildWorker.hpp" />
     <ClInclude Include="Coord.hpp" />
     <ClInclude Include="Map.hpp" />
     <ClInclude Include="MazeBuilder.hpp" />
+    <ClInclude Include="StackBacktraceFast.hpp" />
+    <ClInclude Include="StackBacktraceSlow.hpp" />
     <ClInclude Include="Tile.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,7 +4,7 @@
 
 class Tile {
 public:
-    enum State {
+    enum class State {
         floor,
         wall
     };

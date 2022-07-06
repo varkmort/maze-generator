@@ -5,9 +5,18 @@
 
 class Coord {
 public:
-	size_t x;
-	size_t y;
+    long long x;
+    long long y;
+
+    Coord():Coord(0ll,0ll) { }
+    Coord(long long x, long long y):x(x),y(y) {}
+
 	friend bool operator==(Coord, Coord);
+
+    Coord up();
+    Coord down();
+    Coord left();
+    Coord right();
 };
 
 
