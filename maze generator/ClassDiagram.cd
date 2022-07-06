@@ -17,30 +17,37 @@
   <Class Name="MazeBuilder">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EABACgAQAAAAAAAAAAACAAAAgAIBAAAAAIAQDIBAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAkAAAQAAIEAAAAAIAAAAAAAAA=</HashCode>
       <FileName>MazeBuilder.hpp</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Tile">
     <Position X="3" Y="0.5" Width="1.5" />
-    <NestedTypes>
-      <Enum Name="Tile::State" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Tile.hpp</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
     <TypeIdentifier>
       <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAIAAAAAAAQQ=</HashCode>
       <FileName>Tile.hpp</FileName>
     </TypeIdentifier>
   </Class>
-  <Struct Name="std::hash&lt;Coord&gt;" Collapsed="true">
-    <Position X="3" Y="5.75" Width="1.5" />
+  <Class Name="StackBacktraceSlow">
+    <Position X="7.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Coord.hpp</FileName>
+      <HashCode>EABACAAAAgAAAAAAAIACAAAAgAAAAIIAAAAQDABAAAA=</HashCode>
+      <FileName>StackBacktraceSlow.hpp</FileName>
     </TypeIdentifier>
-  </Struct>
+  </Class>
+  <Class Name="StackBacktraceFast">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABACAAAAgAAAAAAAIACAAAAgAAAAIIAAAAQDABAAAA=</HashCode>
+      <FileName>StackBacktraceFast.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BuildWorker">
+    <Position X="5.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAIAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>BuildWorker.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
