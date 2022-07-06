@@ -10,11 +10,14 @@
 
 
 int main() {
-	Map q(58, 235);//58,235 - fhd fullscrean
+	Map q(1000, 235);//58,235 - fhd fullscrean
 	MazeBuilder mb;
-	mb.setMap(&q);
-	mb.setStartPoint({35,35});
-	mb.build();
-	std::cout << q;
+	mb.makeFast();
+	mb.build(q, {5,5});
+	std::cout << q << "\n\n\n";
+	Map w(1000, 235);
+	mb.makeSlow();
+	mb.build(w, {5, 5});
+	std::cout << w << "\n\n\n";
 	return 0;
 }
