@@ -6,15 +6,16 @@
 #include "Map.hpp"
 #include "BuildWorker.hpp"
 
-class MazeBuilder {
-public:
-	MazeBuilder();
-	void makeFast();
-	void makeSlow();
-	void build(Map& place,Coord start);
-	~MazeBuilder();
-private:
-	BuildWorker *executor;
-};
-
+namespace Mazes {
+	class MazeBuilder {
+	public:
+		MazeBuilder();
+		void makeFast();
+		void makeSlow();
+		void build(Map &place, Coord start);
+		~MazeBuilder();
+	private:
+		BuildWorker *executor;
+	};
+}
 #endif // !MAZE_BUILDER_HPP

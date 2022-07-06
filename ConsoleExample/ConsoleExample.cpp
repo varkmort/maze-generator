@@ -10,6 +10,7 @@
 
 
 int main() {
+	using namespace Mazes;
 	Map q(1000, 235);//58,235 - fhd fullscrean
 	MazeBuilder mb;
 	mb.makeFast();
