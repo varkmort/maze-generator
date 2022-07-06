@@ -5,10 +5,6 @@ Map::Map(const long long length, const long long width)
 	width(width) 
 {
 	map =  new Tile[length * width];
-	//map = new Tile * [length];
-	//for (size_t i = 0; i < length; i++) {
-	//	map[i] = new Tile[width];
-	//}
 }
 
 Map::Map(const Map &other)
@@ -17,11 +13,6 @@ Map::Map(const Map &other)
 {
 	map = new Tile[length * width];
 	memcpy(this->map, other.map, sizeof(Tile) * width * length);
-	//this->map = new Tile * [length];
-	//for (size_t i = 0; i < length; i++) {
-	//	this->map[i] = new Tile[width];
-	//	memcpy(this->map[i], other.map[i], sizeof(Tile) * width);
-	//}
 }
 
 Map::Map(Map &&other)noexcept
@@ -34,10 +25,6 @@ Map::Map(Map &&other)noexcept
 
 Map::~Map() {
 	if (!map) {
-		/*for (size_t i = 0; i < length; i++) {
-			delete[] map[i];
-		}
-		delete[] map;*/
 		delete[] map;
 	}
 }
@@ -64,12 +51,10 @@ bool Map::isInner(Coord coord) {
 		((coord.x >= 0) && (coord.x < width));
 }
 
-
-
 std::ostream& operator<<(std::ostream &out, const Map &map) {
 	for (size_t i = 0; i < map.length; i++) {
 		for (size_t j = 0; j < map.width; j++) {
-			if (map.map[i* map.width +j].isWall()) {
+			if (map.map[i * map.width +j].isWall()) {
 				out << char(0xDB);
 			}
 			else {
