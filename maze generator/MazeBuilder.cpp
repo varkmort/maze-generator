@@ -53,7 +53,7 @@ void MazeBuilder::build() {
         if (!directions.empty()) {
             current = directions.front();
         }
-    }    
+    }
 }
 
 void MazeBuilder::free() {
