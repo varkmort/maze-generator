@@ -1,19 +1,19 @@
 #include "Map.hpp"
 
-Map::Map(const long long length, const long long width) 
-	:length(length), 
-	width(width) 
-{
-	map =  new Tile[length * width];
-}
+namespace Mazes {
 
-Map::Map(const Map &other)
-	:length(other.length),
-	width(other.width) 
-{
-	map = new Tile[length * width];
-	memcpy(this->map, other.map, sizeof(Tile) * width * length);
-}
+	Map::Map(const long long length, const long long width)
+		:length(length),
+		width(width) {
+		map = new Tile[length * width];
+	}
+
+	Map::Map(const Map &other)
+		:length(other.length),
+		width(other.width) {
+		map = new Tile[length * width];
+		memcpy(this->map, other.map, sizeof(Tile) * width * length);
+	}
 
 	Map::Map(Map &&other)noexcept
 		:length(other.length),
@@ -22,11 +22,11 @@ Map::Map(const Map &other)
 		other.map = nullptr;
 	}
 
-Map::~Map() {
-	if (!map) {
-		delete[] map;
+	Map::~Map() {
+		if (!map) {
+			delete[] map;
+		}
 	}
-}
 
 	void Map::setWall(Coord coord) {
 		map[coord.y * width + coord.x].setState(Tile::State::wall);
