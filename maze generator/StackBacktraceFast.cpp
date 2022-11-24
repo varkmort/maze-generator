@@ -12,9 +12,10 @@ namespace Mazes {
             while (!directions.size()) {
                 if (isMazeComplite()) {
                     break;
-                }
+                } 
                 current = path.top();
-                if (!path.empty()) {
+                
+                if (path.size()>1) {
                     path.pop();
                 }
                 directions = getDirections(current);
@@ -37,6 +38,9 @@ namespace Mazes {
             if (!directions.empty()) {
                 current = directions.front();
             }
+
+
+            //std::cout << place << "\n\n\n";
         }
     }
 
@@ -77,7 +81,7 @@ namespace Mazes {
     }
 
     bool StackBacktraceFast::isMazeComplite() {
-        return bool(current == startPoint && !getDirections(current).size());
+        return bool(current == startPoint && getDirections(current).empty());
     }
 
     bool StackBacktraceFast::isPossibleWay(Coord coord) {

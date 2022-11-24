@@ -13,6 +13,7 @@ namespace Mazes {
 		virtual void construct(Map &place, Coord start);
 		virtual void massonary(Map &place);
 		virtual void roadwork(Map &place);
+		~StackBacktraceSlow() {}
 	private:
 		void init(Map *, Coord start);
 		void finish();

@@ -7,18 +7,24 @@
 #include "..\maze generator\Map.hpp"
 #include "..\maze generator\MazeBuilder.hpp"
 
-
-
-int main() {
+void programm() {
 	using namespace Mazes;
-	Map q(1000, 235);//58,235 - fhd fullscrean
+	Map q(58, 235);//58,235 - fhd fullscrean
 	MazeBuilder mb;
 	mb.makeFast();
-	mb.build(q, {5,5});
+	mb.build(q, { 5,5 });
 	std::cout << q << "\n\n\n";
-	Map w(1000, 235);
-	mb.makeSlow();
-	mb.build(w, {5, 5});
-	std::cout << w << "\n\n\n";
+	//Map w(40, 235);
+	//mb.makeSlow();
+	//mb.build(w, {5, 5});
+	//std::cout << w << "\n\n\n";
+}
+
+int main() {
+	while (true)
+	{
+		programm();
+		
+	}
 	return 0;
 }

@@ -12,9 +12,10 @@
 namespace Mazes {
 	class StackBacktraceFast: public BuildWorker {
 	public:
-		virtual void construct(Map &place, Coord start);
-		virtual void massonary(Map &place);
-		virtual void roadwork(Map &place);
+		virtual void construct(Map &place, Coord start) override;
+		virtual void massonary(Map &place)override;
+		virtual void roadwork(Map &place)override;
+		~StackBacktraceFast() {}
 	private:
 		void init(Map *, Coord start);
 		void finish();
