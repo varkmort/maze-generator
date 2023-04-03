@@ -3,37 +3,31 @@
 namespace Mazes {
 
 	Map::Map(const long long length, const long long width)
-		:length(length),
-		width(width) {
-		map = new Tile[length * width];
+		:length_(length),
+		width_(width),
+		map_(length* width)
+	{
+		
 	}
 
 	Map::Map(const Map &other)
-		:length(other.length),
-		width(other.width) {
-		map = new Tile[length * width];
-		memcpy(this->map, other.map, sizeof(Tile) * width * length);
-	}
+		:length_(other.length_),
+		width_(other.width_),
+		map_(other.map_)
+	{}
+	
+	
 
-	Map::Map(Map &&other)noexcept
-		:length(other.length),
-		width(other.width) {
-		this->map = other.map;
-		other.map = nullptr;
-	}
+	
 
-	Map::~Map() {
-		if (!map) {
-			delete[] map;
-		}
-	}
+	Map::~Map() {}
 
 	void Map::setWall(Coord coord) {
-		map[coord.y * width + coord.x].setState(Tile::State::wall);
+		map_[coord.y * width_ + coord.x].setState(Tile::State::wall);
 	}
 
 	void Map::setFlor(Coord coord) {
-		map[coord.y * width + coord.x].setState(Tile::State::floor);
+		map_[coord.y * width_ + coord.x].setState(Tile::State::floor);
 	}
 
 	bool Map::isWall(Coord coord) {
@@ -41,28 +35,65 @@ namespace Mazes {
 			return true;
 		}
 		else {
-			return map[coord.y * width + coord.x].isWall();
+			return map_[coord.y * width_ + coord.x].isWall();
 		}
 	}
 
+	bool Map::isPillar(Coord start){
+		int count{};
+		if (isWall({ start.x + 1,start.y }))count++;
+		if (isWall({ start.x + 1,start.y + 1 }))count++;
+		if (isWall({ start.x + 1,start.y - 1 }))count++;
+
+		if (isWall({ start.x,start.y + 1 }))count++;
+		if (isWall({ start.x,start.y - 1 }))count++;
+
+		if (isWall({ start.x - 1,start.y }))count++;
+		if (isWall({ start.x - 1,start.y + 1 }))count++;
+		if (isWall({ start.x - 1,start.y - 1 }))count++;
+		return (count < 2 && isWall(start)) ? true : false;
+	}
+
+	bool Map::hasPillars()
+	{
+		for (long long i = 0; i < width(); i++) {
+			for (long long j = 0; j < length(); j++) {
+				if (isPillar({ i,j })) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	
+
+	long long Map::length() const{
+		return length_;
+	}
+
+	long long Map::width() const{
+		return width_;
+	}
+
 	bool Map::isInner(Coord coord) {
-		return ((coord.y < length) && (coord.y >= 0)) &&
-			((coord.x >= 0) && (coord.x < width));
+		return ((coord.y < length_) && (coord.y >= 0)) &&
+			((coord.x >= 0) && (coord.x < width_));
 	}
 
 
 
-	std::ostream &operator<<(std::ostream &out, const Map &map) {
-		for (long long i = 0; i < map.length; i++) {
-			for (long long j = 0; j < map.width; j++) {
-				if (map.map[i * map.width + j].isWall()) {
+
+	std::ostream &operator<<(std::ostream &out, Map &map) {
+		for (long long i = 0; i < map.length_; i++) {
+			for (long long j = 0; j < map.width_; j++) {
+				if (map.map_[i * map.width_ + j].isWall()) {
 					out << char(0xDB);
 				}
 				else {
 					out << char(0xB0);
 				}
 			}
-			if (i < map.length - 1) {
+			if (i < map.length_ - 1) {
 				out << '\n';
 			}
 		}

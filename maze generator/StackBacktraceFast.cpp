@@ -45,7 +45,11 @@ namespace Mazes {
     }
 
     void StackBacktraceFast::massonary(Map &place) {
-        //to-do нужно чтоб были реализованы анализаторы 
+        //to-do нужно чтоб были реализованы анализаторы
+        fillLake(place);
+        removePillars(place);
+        
+
     }
 
     void StackBacktraceFast::roadwork(Map &place) {
@@ -56,7 +60,63 @@ namespace Mazes {
         data = place;
         current = start;
         startPoint = start;
+        //makeBorder(place, start);
     }
+
+    void StackBacktraceFast::makeBorder(Map* place, Coord start)    {
+        Coord tmp{ 0,0 };
+        while (!(place->isWall(tmp)))
+        {
+            place->setWall(tmp);
+            tmp.x++;
+        }
+        tmp.x--;
+        tmp.y++;
+        while (!(place->isWall(tmp)))
+        {
+            place->setWall(tmp);
+            tmp.y++;
+        }
+        tmp.y--;
+        tmp.x--;
+        while (!(place->isWall(tmp)))
+        {
+            place->setWall(tmp);
+            tmp.x--;
+        }
+        tmp.x++;
+        tmp.y--;
+        while (!(place->isWall(tmp)))
+        {
+            place->setWall(tmp);
+            tmp.y--;
+        }
+    }
+
+    void StackBacktraceFast::fillLake(Map& place){
+        for (long long i = 0; i < place.width(); i++) {
+            for (long long j = 0; j < place.length(); j++)
+            {
+                if (!(visited.contains({ i,j })) && !(place.isWall({ i,j }))) {
+                    place.setWall({ i,j });
+                }
+            }
+        }
+    }
+
+    void StackBacktraceFast::removePillars(Map& place){
+        while (place.hasPillars()){
+            for (long long i = 0; i < place.width(); i++) {
+                for (long long j = 0; j < place.length(); j++) {
+                    if (place.isPillar({ i,j })) {
+                        place.setFlor({ i,j });
+                    }
+                }
+            }            
+        }
+    }
+
+   
 
     void StackBacktraceFast::finish() {
         data = nullptr;

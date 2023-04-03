@@ -18,6 +18,9 @@ namespace Mazes {
 		~StackBacktraceFast() {}
 	private:
 		void init(Map *, Coord start);
+		void makeBorder(Map*, Coord start);
+		void fillLake(Map& place);
+		void removePillars(Map& place);
 		void finish();
 		std::vector<Coord> getDirections(Coord);
 		bool isPossibleWay(Coord coord);

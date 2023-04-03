@@ -21,10 +21,6 @@ void programm() {
 }
 
 int main() {
-	while (true)
-	{
-		programm();
-		
-	}
+	programm();
 	return 0;
 }

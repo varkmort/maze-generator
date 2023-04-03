@@ -157,6 +157,7 @@
     <ClCompile Include="StackBacktraceFast.cpp" />
     <ClCompile Include="StackBacktraceSlow.cpp" />
     <ClCompile Include="Tile.cpp" />
+    <ClCompile Include="WFC.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BuildWorker.hpp" />
@@ -166,6 +167,7 @@
     <ClInclude Include="StackBacktraceFast.hpp" />
     <ClInclude Include="StackBacktraceSlow.hpp" />
     <ClInclude Include="Tile.hpp" />
+    <ClInclude Include="WFC.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
