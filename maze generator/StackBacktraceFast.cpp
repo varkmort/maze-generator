@@ -38,18 +38,12 @@ namespace Mazes {
             if (!directions.empty()) {
                 current = directions.front();
             }
-
-
-            //std::cout << place << "\n\n\n";
         }
     }
 
     void StackBacktraceFast::massonary(Map &place) {
-        //to-do нужно чтоб были реализованы анализаторы
         fillLake(place);
         removePillars(place);
-        
-
     }
 
     void StackBacktraceFast::roadwork(Map &place) {
